@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="quizz.css">
+    <title>Personality Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* height: 100vh; */
+        }
+
+        #quizContainer {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #resultMessage {
+            text-align: center;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+<div id="quizContainer">
+    <h1>Personality Quiz</h1>
+    <div class=page1>
+        <form id="quizForm">
+            <!-- Add name and email input boxes -->
+            <form id="userInfoForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <!-- Question 1 -->
+                <label>1. What’s your dream job?</label><br>
+                <input type="radio" name="q1" value="A" required> Leading a development team
+                <input type="radio" name="q1" value="C" required> Coding new solutions
+                <input type="radio" name="q1" value="B" required> Meeting clients for brief, etc.
+                <input type="radio" name="q1" value="D" required> Testing and quality check.<br><br>
+
+                <!-- Question 2 -->
+                <label>2. An angry customer has just called. You:</label><br>
+                <input type="radio" name="q2" value="A" required> Take immediate action to address the customer’s concerns.
+                <input type="radio" name="q2" value="D" required> Listen to the customer calmly and patiently.
+                <input type="radio" name="q2" value="C" required> Find the root cause of the customer’s problem.
+                <input type="radio" name="q2" value="B" required> Speak to the customer till she feels better.<br><br>
+
+                <!-- Question 3 -->
+                <label>3. You are a superhero. What is your special power?</label><br>
+                <input type="radio" name="q3" value="C" required> Super Intelligence.
+                <input type="radio" name="q3" value="B" required> Mind Reading.
+                <input type="radio" name="q3" value="A" required> Time Travel.
+                <input type="radio" name="q3" value="D" required> Protective Shield.<br><br>
+
+                <!-- Question 4 -->
+                <label>4. When you do a good job, you’d like to receive:</label><br>
+                <input type="radio" name="q4" value="C" required> A tougher challenge
+                <input type="radio" name="q4" value="B" required> A shiny badge
+                <input type="radio" name="q4" value="A" required> A huge cash incentive
+                <input type="radio" name="q4" value="D" required> The power to choose my team<br><br>
+
+                <!-- Question 5 -->
+                <label>5. What’s your biggest weakness?</label><br>
+                <input type="radio" name="q5" value="A" required> I’m impatient
+                <input type="radio" name="q5" value="B" required> I postpone everything
+                <input type="radio" name="q5" value="C" required> I can’t work on vague briefs.
+                <input type="radio" name="q5" value="D" required> I don’t like change.<br><br>
+
+                <!-- Question 6 -->
+                <label>6. I find this the most irritating:</label><br>
+                <input type="radio" name="q6" value="B" required> Gossiping about people in the office
+                <input type="radio" name="q6" value="D" required> People interrupting me when I am working
+                <input type="radio" name="q6" value="A" required> Instead of writing a small email and saving time, people wasting my time talking
+                <input type="radio" name="q6" value="C" required> People telling me about their personal problems<br><br>
+
+                <!-- Question 7 -->
+                <label>7. When your boss is happy with you, he/she says:</label><br>
+                <input type="radio" name="q7" value="D" required> You always meet your deadlines.
+                <input type="radio" name="q7" value="C" required> That was so difficult. Yet you did it!
+                <input type="radio" name="q7" value="A" required> Your submission has no errors. Good job!
+                <input type="radio" name="q7" value="B" required> You are so popular. Everyone loves you!<br><br>
+
+                <!-- Question 8 -->
+                <label>8. When your friend becomes a Contractor, you:</label><br>
+                <input type="radio" name="q8" value="B" required> Feel happy and congratulate her!
+                <input type="radio" name="q8" value="A" required> Work harder. If she can get it, so can you!
+                <input type="radio" name="q8" value="C" required> Ask her to share the details of her interview
+                <input type="radio" name="q8" value="D" required> That’s okay. She was better than you anyway.<br><br>
+    </div>
+
+    <div class=page2>
+        <!-- Question 9 -->
+        <label>9. What’s the rule you live by?</label><br>
+        <input type="radio" name="q9" value="A" required> Win, win, win!
+        <input type="radio" name="q9" value="B" required> Life’s short. Have fun!
+        <input type="radio" name="q9" value="C" required> Nothing’s impossible.
+        <input type="radio" name="q9" value="D" required> Good habits make a man.<br><br>
+
+        <!-- Question 10 -->
+        <label>10. When my year is good, it will be because:</label><br>
+        <input type="radio" name="q10" value="B" required> I made more friends.
+        <input type="radio" name="q10" value="D" required> I became more confident.
+        <input type="radio" name="q10" value="C" required> I created something great.
+        <input type="radio" name="q10" value="A" required> I met all my goals<br><br>
+
+        <!-- Question 11 -->
+        <label>11. When a new task is assigned to you, your first thought is:</label><br>
+        <input type="radio" name="q11" value="A" required> Let’s get it done fast!
+        <input type="radio" name="q11" value="B" required> This will be fun!
+        <input type="radio" name="q11" value="C" required> I need more details and a clearer brief.
+        <input type="radio" name="q11" value="D" required> My document will help others learn.<br><br>
+
+        <!-- Question 12 -->
+        <label>12. At Fostering Linux, I hate this the most:</label><br>
+        <input type="radio" name="q12" value="D" required> Frequent changes
+        <input type="radio" name="q12" value="C" required> Noisy workplaces
+        <input type="radio" name="q12" value="B" required> Being yelled at publicly
+        <input type="radio" name="q12" value="A" required> Waste of time by being assigned unproductive tasks<br><br>
+
+        <!-- Question 13 -->
+        <label>13. What do you like most about Fostering Linux?</label><br>
+        <input type="radio" name="q13" value="B" required> Making new friends.
+        <input type="radio" name="q13" value="C" required> Setting own deadlines
+        <input type="radio" name="q13" value="A" required> Learning many technologies at the same time
+        <input type="radio" name="q13" value="D" required> Receiving a clear brief for every task<br><br>
+
+        <!-- Question 14 -->
+        <label>14. How would you describe yourself?</label><br>
+        <input type="radio" name="q14" value="A" required> Ambitious
+        <input type="radio" name="q14" value="B" required> Enthusiastic
+        <input type="radio" name="q14" value="C" required> Creative
+        <input type="radio" name="q14" value="D" required> Sincere<br><br>
+
+        <!-- Question 15 -->
+        <label>15. I work best when I:</label><br>
+        <input type="radio" name="q15" value="A" required> Work alone.
+        <input type="radio" name="q15" value="B" required> Work with friends.
+        <input type="radio" name="q15" value="C" required> Work on a task I like.
+        <input type="radio" name="q15" value="D" required> Work in a routine.<br><br>
+
+        <!-- Question 16 -->
+        <label>16. What kind of a boss would you hate to work under?</label><br>
+        <input type="radio" name="q16" value="C" required> A stupid boss
+        <input type="radio" name="q16" value="A" required> An emotional boss
+        <input type="radio" name="q16" value="D" required> A confused boss
+        <input type="radio" name="q16" value="B" required> A short-tempered boss<br><br>
+
+        <button type="button" onclick="submitQuiz()">Submit</button>
+        </form>
+
+        <div id="resultMessage"></div>
+    </div>
+</div>
+<script>
+    function submitQuiz() {
+        // Initialize counters for each keyword
+        let countA = 0;
+        let countB = 0;
+        let countC = 0;
+        let countD = 0;
+
+        // Get all selected radio buttons
+        const radioButtons = document.querySelectorAll('input[type=radio]:checked');
+
+        // Count responses for each keyword
+        radioButtons.forEach(radioButton => {
+            const value = radioButton.value;
+            if (value === 'A') {
+                countA++;
+            } else if (value === 'B') {
+                countB++;
+            } else if (value === 'C') {
+                countC++;
+            } else if (value === 'D') {
+                countD++;
+            }
+        });
+
+        // Determine the keyword with the maximum count
+        let maxKeyword = 'A';
+        let maxCount = countA;
+
+        if (countB > maxCount) {
+            maxKeyword = 'B';
+            maxCount = countB;
+        }
+
+        if (countC > maxCount) {
+            maxKeyword = 'C';
+            maxCount = countC;
+        }
+
+        if (countD > maxCount) {
+            maxKeyword = 'D';
+            maxCount = countD;
+        }
+
+        // Display the result message
+        const resultMessage = document.getElementById('resultMessage');
+        switch (maxKeyword) {
+            case 'A':
+                resultMessage.innerHTML = "Type A person, you’re a total doer, a leader, an inspirational force to the people around you. You have high standards for yourself and others—and that’s what makes you so amazing! You might’ve heard words like “pushy” or “bossy” used to describe you in the past, but we know that it’s just because you care. To keep building on your strengths, focus on refining your leadership skills, setting ambitious goals, and pushing the envelope every day. And remember to loosen the reins every now and then, too!";
+                break;
+            case 'B':
+                resultMessage.innerHTML = " Type B person, You are beauty, you are grace—you’re a beloved Type B personality! Type Bs are an absolute joy to be around, and you’re no exception. You’re a dreamer at heart and you radiate warmth, so you’re always surrounded by a flock of admiring friends. There’s something special about the way you interact with people, and that’s a huge skill. However, you may find that you’re easily bored and have a hard time staying organized. This is because you’re just so creative (and you like to think big!)—so it’s hard to get yourself to focus on things that feel unexciting or unimportant. But that’s okay; keep dazzling the crowd with your amazing personality, and success is sure to follow.";
+                break;
+            case 'C':
+                resultMessage.innerHTML = " Type C person, Your mind is your greatest tool. Your focus is unwavering. You’re a meticulous and brilliant Type C personality. No problem is too complex and no project is too big. You know how to absorb tons of information, sort through the tiny details, and create something great. In fact, there’s nothing you love more! Sometimes though, your passion for problem-solving can distract you from other things. At times, you might let relationships fall by the wayside when you’re hard at work. But who can blame you? You’ve got an eye for detail and design, and if you let that guide you through your life and career, you’re sure to make a splash!";
+                break;
+            case 'D':
+                resultMessage.innerHTML = " Type D person, Reliable, steady, and hard-working, you’re a Type D through and through. You know that the best way to get results is by staying consistent, day in and day out. You’re not motivated by climbing the ladder or making tons of extra money—your goal is to be kind, happy, and confident. And you almost always achieve this goal! To some, your contentedness might look like complacency. But the truth is, you just know that you’re already happy as you are—and that’s amazing! Your relaxed demeanor and consistency are your superpowers. As long as you keep leaning into those awesome skills, you’ll get everything that you want.";
+                break;
+            default:
+                resultMessage.innerHTML = "No responses selected.";
+        }
+    }
+</script>
+</body>
+</html>
